@@ -44,7 +44,7 @@ I started by defining the differential equation as a Python function, which take
 
 Utilizing the `scipy.integrate.RK45` class, I implemented this method by specifying the differential equation, initial conditions, step size, and integration bounds.
 
-### Implementing Euler's Method
+### Implementing Manually using Euler's Method
 
 I manually coded Euler's method, iteratively updating the solution based on the equation \(y_{n+1} = y_n + h \cdot f(x_n, y_n)\), where \(h\) is the predefined step size.
 
