@@ -1,6 +1,6 @@
 # ODEP2
 
-`ODEP2.py` is a Python script for solving ordinary differential equations (ODEs) using the RK45 and Euler's methods. It includes functionality for error analysis and performance comparison between these numerical methods.
+ODEP2.py` is my submission for CST-305: Project 2 – Runge-Kutta-Fehlberg (RKF) for ODE.
 
 ## Installation
 
