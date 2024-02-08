@@ -1,6 +1,6 @@
 # ODEP2
 
-ODEP2.py` is my submission for CST-305: Project 2 – Runge-Kutta-Fehlberg (RKF) for ODE.
+`ODEP2.py` is my submission for CST-305: Project 2 – Runge-Kutta-Fehlberg (RKF) for ODE.
 
 ## Installation
 
