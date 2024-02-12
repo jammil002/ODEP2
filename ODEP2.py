@@ -42,13 +42,36 @@ endTime = initialTime + 2000 * stepSize  # Ensuring at least 2000 steps
 timeStepsRK4, solutionValuesRK4 = solveOdeRK4(odeFunction, initialTime, initialSolution, endTime, stepSize)
 timeStepsSciPy, solutionValuesSciPy = solveOdeSciPy(odeFunction, initialTime, initialSolution, endTime, stepSize)
 
-# Plot the results for comparison
-plt.figure(figsize=(10, 6))
+# Generate the plots
+plt.figure(figsize=(15, 10))
+
+# Plot for RK4 Manual
+plt.subplot(3, 1, 1)
+plt.plot(timeStepsRK4, solutionValuesRK4, label='RK4 Manual', color='red', linestyle='--')
+plt.title('Solution of ODE using RK4 Manual Method')
+plt.xlabel('Time t')
+plt.ylabel('Solution y')
+plt.grid(True)
+plt.legend()
+
+# Plot for RK45 SciPy
+plt.subplot(3, 1, 2)
+plt.plot(timeStepsSciPy, solutionValuesSciPy, label='RK45 SciPy', color='blue', linestyle='-')
+plt.title('Solution of ODE using RK45 SciPy Method')
+plt.xlabel('Time t')
+plt.ylabel('Solution y')
+plt.grid(True)
+plt.legend()
+
+# Combined plot for comparison
+plt.subplot(3, 1, 3)
 plt.plot(timeStepsRK4, solutionValuesRK4, label='RK4 Manual', color='red', linestyle='--')
 plt.plot(timeStepsSciPy, solutionValuesSciPy, label='RK45 SciPy', color='blue', linestyle='-')
 plt.title('Comparison of ODE Solutions: RK4 Manual vs RK45 SciPy')
 plt.xlabel('Time t')
 plt.ylabel('Solution y')
-plt.legend()
 plt.grid(True)
+plt.legend()
+
+plt.tight_layout()
 plt.show()
